@@ -1,18 +1,24 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
-import { resolve } from 'path'; 
 
 export default defineConfig({
-    root: './src',
+    root: resolve(__dirname, 'src'),
     build: {
-        outDir: '../dist'
+        outDir: resolve(__dirname, 'dist'),
+        rollupOptions: {
+            input: {
+              main: resolve(__dirname, 'src/index.html'),
+              login: resolve(__dirname, 'src/login.html'),
+              register: resolve(__dirname, 'src/register.html'),
+              404:resolve(__dirname, 'src/404.html'),
+            }
+          }
     },
-    plugins: [
-        handlebars({
-            partialDirectory: resolve(__dirname, './src/partials'), 
-            context: {
-                title: 'Hello, world!',
-            },
-        }),
-    ],
+    plugins: [handlebars({
+        partialDirectory: resolve(__dirname, 'src/partials'),
+        context:{
+            path: resolve(__dirname, 'src'),
+        }
+    })]
 });
