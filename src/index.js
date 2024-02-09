@@ -1,20 +1,58 @@
-import '../style.css'
-import javascriptLogo from '../javascript.svg'
-import viteLogo from '/vite.svg'
+import './style.css'
+import login from './pages/Login';
+import register from './pages/Register';
+import userProfile from './pages/UserProfile';
+import chat from './pages/Chat';
+import Handlebars from 'handlebars';
+import { Router } from './router';
 
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
+const routes = {
+  '/login': login,
+  '/register': register,
+  '/user': userProfile,
+  '/chat': chat,
+};
 
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+let contentDiv = document.getElementById('app');
+contentDiv.innerHTML = routes[window.location.pathname]();
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  // const app = document.querySelector('#app');
+
+  // if(!app){
+  //   return;
+  // } 
+
+  // app.innerHTML = login();
+
+  // const router = new Router(app);
+
+  // router
+  // .add('/' , login)
+  // .add('/register' , register)
+  // .add('/chat' , chat)
+  // .add('/user' , userProfile)
+
+  // router.go(window.location.pathname);
+});
+
+// function navigate(page) {
+//   const [source, context] = pages[page];
+//   const container = document.getElementById('app');
+//   container.innerHTML = Handlebars.compile(source)(context);
+// }
+
+// document.addEventListener('DOMContentLoaded', () => navigate('nav'));
+
+// document.addEventListener('click', e => {
+//   //@ts-ignore
+//   const page = e.target.getAttribute('page');
+//   if (page) {
+//     navigate(page);
+//     e.preventDefault();
+//     e.stopImmediatePropagation();
+//   }
+// });
+
