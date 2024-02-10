@@ -4,13 +4,55 @@
   flex-direction: column;
   width: 100%;
 
+  &.flex-row {
+    flex-direction: row-reverse;
+    border-bottom: 1px solid $placeholder;
+    justify-content: space-between;
+
+    &:last-of-type {
+      border: 0;
+    }
+    label {
+      font-size: 1em;
+      color: $text;
+      transform: unset;
+      transition: ease-in-out 0.4s;
+      padding-block: 0.5em;
+      font-weight: 700;
+    }
+    input {
+      border: unset;
+      text-align: right;
+      color: $label;
+
+      &:focus + label,
+      &.filled__input + label {
+        transform: unset;
+      }
+    }
+  }
+
+  
+
   input {
     border: unset;
     border-bottom: 1px solid $primary;
     padding: 0.5em 0;
+    color: $text;
+
+    &:focus {
+      outline: unset;
+    }
+
+    &:focus + label,
+    &.filled__input + label {
+      transform: translateY(-35px);
+    }
   }
   label {
     font-size: 0.8em;
     color: $label;
+    transform: translateY(-24px);
+    transition: ease-in-out 0.4s;
   }
 }

@@ -1,0 +1,19 @@
+
+<script id="navigation-template" type="text/x-handlebars-template">
+    <ul>
+        {{#each navigation}}
+            <li><a href="{{url}}">{{label}}</a></li>
+        {{/each}}
+    </ul>
+</script>
+
+<nav class="main-nav d-flex f-center">
+    <ul class="nav d-flex">
+        {{> nav/_navItem nav_link="/login.html" nav_text="Login"}}
+        {{> nav/_navItem nav_link="/register.html" nav_text="Register"}}
+        {{> nav/_navItem nav_link="/chat.html" nav_text="Chat"}}
+        {{> nav/_navItem nav_link="/user.html" nav_text="User Profile"}}
+        {{> nav/_navItem nav_link="/404.html" nav_text="404"}}
+        {{> nav/_navItem nav_link="/500.html" nav_text="500"}}
+  </ul>
+</nav>

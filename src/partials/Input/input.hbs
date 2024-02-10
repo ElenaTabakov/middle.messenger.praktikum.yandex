@@ -1,4 +1,4 @@
-<div class="input_wrapper d-flex">
+<div class="input_wrapper d-flex {{#if class}} {{class}} {{/if}}">
+  <input type="{{type}}" id="{{id}}" name="{{name}}" placeholder="{{placeholder}}"/>
   <label for="{{id}}">{{label}}</label>
-  <input type="{{type}}" id="{{id}}" name="{{name}}" />
 </div>

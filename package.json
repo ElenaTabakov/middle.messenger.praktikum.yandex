@@ -15,6 +15,7 @@
     "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.11.3",
     "handlebars": "^4.7.8",
     "normalize.css": "^8.0.1",
     "typescript": "^5.3.3"

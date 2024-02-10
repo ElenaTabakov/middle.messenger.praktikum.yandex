@@ -1,0 +1,9 @@
+<form id="user-change-details">   
+    {{> input/input id="email" name="email" label="Email" type="email" class="flex-row" placeholder="pochta@yandex.ru" }}
+    {{> input/input id="login" name="login" label="User name" type="text" class="flex-row" placeholder="ivanivanov"}}
+    {{> input/input id="first_name" name="first_name" label="First name" type="text" class="flex-row" placeholder="Иван"}}
+    {{> input/input id="second_name" name="second_name" label="Last name" type="text" class="flex-row" placeholder="Иванов"}}
+    {{> input/input id="display_name" name="display_name" label="Display name" type="text" class="flex-row" placeholder="Иван"}}
+    {{> input/input id="phone" name="phone" label="Phone number" type="tel" class="flex-row" placeholder="+7 (909) 967 30 30"}}
+    {{> button/button class="save" type="submit" text="Save changes"}}
+</form>
