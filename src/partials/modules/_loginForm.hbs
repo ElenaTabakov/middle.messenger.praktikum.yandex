@@ -1,0 +1,9 @@
+<div class="form-wrapper">
+  <h2 class="title">{{title}}</h2>
+  <form id="login-form" class="d-flex f-center form__google-style">
+    {{> input/input id="login" name="login" label="User name" type="text"}}
+    {{> input/input id="password" name="password" label="Password" type="password"}}   
+    {{> button/button class="sign-in" type="submit" text="Sing In"}}
+  </form>
+  <a href="/register.html" class="">Create account</a>
+</div>

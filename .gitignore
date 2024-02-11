@@ -8,6 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+<<<<<<< HEAD
+=======
+dist
+>>>>>>> sprint_1
 dist-ssr
 *.local
 
@@ -20,4 +24,8 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
+<<<<<<< HEAD
 *.sw?
+=======
+*.sw?
+>>>>>>> sprint_1

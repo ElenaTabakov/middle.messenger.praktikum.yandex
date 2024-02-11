@@ -1,0 +1,355 @@
+@import "normalize.css";
+@import "../partials/button/button.scss";
+@import "../partials/input/input.scss";
+@import "../partials/card/card.scss";
+@import "_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap");
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  * {
+    font-family: "Assistant", sans-serif;
+    font-size: 14px;
+  }
+  .container {
+    width: 1280px;
+    height: 720px;
+  }
+  a {
+    font-weight: 500;
+    color: $primary;
+    text-decoration: inherit;
+    transition: ease-in-out 0.4s;
+    cursor: pointer;
+    &:hover {
+      color: $cta;
+    }
+  }
+  button {
+    transition: ease-in-out 0.4s;
+    cursor: pointer;
+    border: unset;
+    &:hover {
+      background: $cta;
+      color: #fff;
+    }
+    &:focus,
+    :focus-visible {
+      outline: 1px auto -webkit-focus-ring-color;
+    }
+    i {
+      transition: ease-in-out 0.3s;
+    }
+  }
+  div {
+    box-sizing: border-box;
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  &.f-end {
+    justify-content: flex-end;
+  }
+  &.f-start {
+    justify-content: flex-start;
+  }
+  &.f-center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.d-grid {
+  display: grid;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 2em;
+  position: fixed;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  .nav {
+    list-style: none;
+    justify-content: space-evenly;
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+    a {
+      font-size: 1.2em;
+      padding: 0 0.5em;
+    }
+  }
+}
+
+.form-wrapper {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+  width: 340px;
+  padding: 50px 30px 30px;
+
+  form {
+    flex-direction: column;
+    row-gap: 1em;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0;
+    color: $text;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 1.5em;
+  }
+
+  a {
+    text-align: center;
+    margin-top: 1.5em;
+    display: block;
+  }
+}
+
+.page-404 {
+  flex-direction: column;
+  h1 {
+    margin: 0;
+  }
+  a {
+    margin-top: 3em;
+  }
+}
+
+.chat__wrapper {
+  grid-template-columns: 340px 1fr;
+  width: 100%;
+  border: 1px solid #f1f1f1;
+}
+
+.chat__message-left {
+  background: $bg-gray;
+
+  .chat__search {
+    width: 100%;
+    text-align: center;
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 1.3em;
+
+    .chat__search-text {
+      color: $label;
+      display: inline-flex;
+      margin: 0 auto;
+      align-items: center;
+
+      i {
+        margin: 2px 5px -2px 0;
+      }
+    }
+  }
+
+  .chat__message-list-header {
+    padding: 10px;
+
+    .profile__link {
+      text-align: right;
+      margin-block: 0.5em;
+
+      a {
+        color: $label;
+
+        &:hover {
+          color: $primary;
+        }
+        i {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.chat__message-right {
+  padding-inline: 20px;
+
+  .chat__message-current-chat {
+    height: 100%;
+    grid-template-rows: 54px 1fr 54px;
+
+    .header__current-chat {
+      width: 100%;
+      justify-content: space-between;
+      border-bottom: 1px solid $placeholder;
+
+      .chat__current-user-profile {
+        align-items: center;
+      }
+
+      .card__image-placeholder {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      #users-control {
+        width: 24px;
+        height: 24px;
+        align-self: center;
+        background: transparent;
+        border-radius: 50%;
+        &:hover {
+          background: #f5f5f5;
+          color: $primary;
+        }
+      }
+
+      .chat__current-user-name {
+        font-weight: 700;
+        margin-inline-start: 1em;
+      }
+    }
+
+    .footer__current-chat {
+      border-top: 1px solid $placeholder;
+      padding-block: 10px;
+    }
+
+    #chat-form {
+      grid-template-columns: 30px 1fr 30px;
+      height: 100%;
+      grid-column-gap: 10px;
+
+      #chat__message-send {
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        align-self: center;
+        background: $primary;
+        line-height: 28px;
+        color: #fff;
+        &:hover {
+          background: $cta;
+        }
+      }
+      #chat__add-file-btn {
+        background: transparent;
+
+        i {
+          font-size: 2em;
+          color: $label;
+          transform: rotate(32deg);
+          display: block;
+          margin-top: -3px;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      #message {
+        background: #f1f1f1;
+        border: unset;
+        padding-inline: 1.5em;
+        border-radius: 25px;
+      }
+    }
+  }
+}
+
+.user__wrapper {
+  height: 100%;
+
+  .user__wrapper-inner {
+    grid-template-columns: 64px 1fr;
+    height: 100%;
+
+    .user__button-back-wrapper {
+      height: 100%;
+      padding-inline: 10px;
+      background: $bg-gray;
+    }
+
+    .step-back {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: $primary;
+      color: #fff;
+      align-self: center;
+      &:hover{
+        background: $cta;
+      }
+    }
+  }
+
+  .user__profile-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  #user-change-details {
+    width: 510px;
+    margin-top: 50px;
+  }
+
+  .btn.save {
+    min-width: 280px;
+    margin: 50px auto;
+    display: block;
+  }
+
+  .user__profile-img-wrapper {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $placeholder;
+    overflow: hidden;
+    i {
+      font-size: 40px;
+      color: #cdcdcd;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
