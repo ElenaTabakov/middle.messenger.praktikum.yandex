@@ -1,13 +1,13 @@
 <div class="form-wrapper">
   <h2 class="title">{{title}}</h2>
   <form id="register-form" class="d-flex f-center form__google-style">
-    {{> input/input id="email" name="email" label="Email" type="email"}}
-    {{> input/input id="login" name="login" label="User name" type="text"}}
-    {{> input/input id="first_name" name="first_name" label="First name" type="text"}}
-    {{> input/input id="second_name" name="second_name" label="Last name" type="text"}}
-    {{> input/input id="phone" name="phone" label="Phone number" type="tel"}}
-    {{> input/input id="password" name="password" label="Password" type="password"}} 
-    {{> input/input id="password_repeat" name="password_repeat" label="Repeat Password" type="password"}} 
+    {{> formField/input id="email" name="email" label="Email" type="email"}}
+    {{> formField/input id="login" name="login" label="User name" type="text"}}
+    {{> formField/input id="first_name" name="first_name" label="First name" type="text"}}
+    {{> formField/input id="second_name" name="second_name" label="Last name" type="text"}}
+    {{> formField/input id="phone" name="phone" label="Phone number" type="tel"}}
+    {{> formField/input id="password" name="password" label="Password" type="password"}} 
+    {{> formField/input id="password_repeat" name="password_repeat" label="Repeat Password" type="password"}} 
     {{> button/button class="btn" type="submit" text="Register"}}
   </form>
   <a href="/login.html" class="">Sign in</a>
