@@ -11,7 +11,10 @@ export default defineConfig({
               main: resolve(__dirname, 'src/index.html'),
               login: resolve(__dirname, 'src/login.html'),
               register: resolve(__dirname, 'src/register.html'),
+              chat: resolve(__dirname, 'src/chat.html'),
+              user: resolve(__dirname, 'src/user.html'),
               404:resolve(__dirname, 'src/404.html'),
+              500:resolve(__dirname, 'src/500.html'),
             }
           }
     },
