@@ -4,7 +4,7 @@ This project is a messenger application built using pure JavaScript with Vite an
 
 ## Style Design
 
-The style design for this project can be found on Figma. [Click here](https://www.figma.com/file/QrMkBIpRlgV6TUy9dkzFAN/Chat_JS?type=design&node-id=1%3A499&mode=design&t=URDwtbxW6D7gLBYr-1) to view the design.
+The style design for this project can be found on Figma. ![Click here](https://www.figma.com/file/QrMkBIpRlgV6TUy9dkzFAN/Chat_JS?type=design&node-id=1%3A499&mode=design&t=URDwtbxW6D7gLBYr-1) to view the design.
 
 ## Commands
 
@@ -40,4 +40,4 @@ npm run preview
 This command serves the built project locally. It allows you to view the production build of your application before deploying it to a live server.
 
 
-You can view the final version of this project deployed on Netlify.  [Click here](https://transcendent-tiramisu-e06aba.netlify.app/)  to see the live demo
+You can view the final version of this project deployed on Netlify.  ![Click here](https://transcendent-tiramisu-e06aba.netlify.app/)  to see the live demo
