@@ -1,52 +1,51 @@
 <div class="d-grid chat__wrapper">
-
-        <div class="chat__message-left">
-            <div class="chat__message-list-header">
-                <div class="profile__link">
-                    <a href="/user.html">Account <i class="bi bi-chevron-right"></i></a>
-                </div>
-                <div class="chat__search">
-                    <span class="chat__search-text"><i class="bi bi-search"></i>Search</span>
-                </div>
+    <div class="chat__message-left">
+        <div class="chat__message-list-header">
+            <div class="profile__link">
+                <a href="/user.html">Account <i class="bi bi-chevron-right"></i></a>
             </div>
-
-            <div class="chat__message-list-content">
-                {{> card/card
-                id="1"
-                image_src="\static\images\ellips.png"
-                name="Илья"
-                message="Друзья, у меня для вас особенный выпуск новостей!И Human Interface"
-                time="15:12"
-                number="2"
-                }}
-                {{> card/card
-                id="2"
-                name="Design"
-                self="You:"
-                message="Круто"
-                time="Fri"
-                }}
+            <div class="chat__search">
+                <span class="chat__search-text"><i class="bi bi-search"></i>Search</span>
             </div>
         </div>
-        <div class="chat__message-right">
-            <div class="chat__message-current-chat d-grid">
-                <div class="header__current-chat d-flex">
-                    <div class="chat__current-user-profile d-flex">
-                        <div class="card__image-placeholder">
-                            <img src="\static\images\ellips.png" alt="avatar">
-                        </div>
-                        <div class="chat__current-user-name">Вадим</div>
+
+        <div class="chat__message-list-content">
+            {{> card/card
+            id="1"
+            image_src="\static\images\ellips.png"
+            name="Илья"
+            message="Друзья, у меня для вас особенный выпуск новостей!И Human Interface"
+            time="15:12"
+            number="2"
+            }}
+            {{> card/card
+            id="2"
+            name="Design"
+            self="You:"
+            message="Круто"
+            time="Fri"
+            }}
+        </div>
+    </div>
+    <div class="chat__message-right">
+        <div class="chat__message-current-chat d-grid">
+            <div class="header__current-chat d-flex">
+                <div class="chat__current-user-profile d-flex">
+                    <div class="card__image-placeholder">
+                        <img src="\static\images\ellips.png" alt="avatar">
                     </div>
-                    <button id="users-control"><i class="bi bi-three-dots-vertical"></i></button></i>
+                    <div class="chat__current-user-name">Вадим</div>
                 </div>
-                <div class="content__curent-chat"></div>
-                <div class="footer__current-chat">
-                    <form action="" id="chat-form" class="d-grid">
-                        <button id="chat__add-file-btn"><i class="bi bi-paperclip"></i></button>
-                        <input  type="textarea" name="message" placeholder="Message" id="message">
-                        <button id="chat__message-send" type="submit"><i class="bi bi-arrow-right"></i></button>
-                    </form>
-                </div>
+                <button id="users-control"><i class="bi bi-three-dots-vertical"></i></button></i>
+            </div>
+            <div class="content__curent-chat"></div>
+            <div class="footer__current-chat">
+                <form action="" id="chat-form" class="d-grid">
+                    <button id="chat__add-file-btn"><i class="bi bi-paperclip"></i></button>
+                    <input type="textarea" name="message" placeholder="Message" id="message">
+                    <button id="chat__message-send" type="submit"><i class="bi bi-arrow-right"></i></button>
+                </form>
             </div>
         </div>
     </div>
+</div>
