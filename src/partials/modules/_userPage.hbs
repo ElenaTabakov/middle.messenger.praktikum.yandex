@@ -1,0 +1,20 @@
+<div class="user__wrapper">
+    <div class="d-grid user__wrapper-inner">
+        <div class="user__button-back-wrapper d-flex f-center">
+            <button class="step-back">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+        </div>
+        <div class="user__profile-wrapper d-flex">
+            <div class="user__profile-img-wrapper">
+                {{#if img}}
+                    <img src="{{img}}" alt="avatar {{first_name}}">
+                   {{else}} 
+                   <i class="bi bi-image"></i> 
+                {{/if}}
+            </div>
+            <h2 class="title">{{display_name}}</h2>
+            {{> modules/_userChangeDetailsForm}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="chat__card" id={{id}}>
+  <div class="d-grid">
+    <div class="card__image">
+      <div class="card__image-placeholder">
+        {{#if image_src}}
+          <img src="{{image_src}}" alt="avatar {{name}}" />
+        {{/if}}
+      </div>
+    </div>
+    <div class="card__content">
+      <div class="card__content-name">{{name}}</div>
+      <div class="card__content-text">
+        {{#if self}}
+          <span class="self__flag">{{self}}</span>
+        {{/if}}
+        {{message}}
+      </div>
+    </div>
+    <div class="card__time d-flex">
+      <span class="card__time-date">
+        {{time}}
+      </span>
+      <span class="card__message-indicator">
+        {{#if number}}
+          <span class="card__message-indicator-number">{{number}}</span>
+        {{/if}}
+      </span>
+    </div>
+  </div>
+</div>
