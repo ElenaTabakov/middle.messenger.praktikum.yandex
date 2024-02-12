@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
-    root: resolve(__dirname, 'src'),
+    root: resolve(__dirname, 'src'),//
     publicDir: resolve(__dirname, 'static'),
     build: {
         outDir: resolve(__dirname, 'dist'),
